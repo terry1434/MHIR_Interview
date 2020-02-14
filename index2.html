@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .container {
+            width: 500px;
+            height: 40px;
+            margin: 0 auto;
+            border: 1px solid #c2b272;
+        }
+
+        /* 给ul和li元素添加样式，满足： */
+        /* 1.给ul去掉默认的li小圆点 */
+        /* 2.元素li在ul元素中水平排列，单个项目宽度80像素(宽度包括外边距与内边距)，项目间距10像素 */
+        /* 参考答案： */
+        ul {
+            list-style: none;
+        }
+
+        ul>li {
+            float: left;
+            margin-right: 10px;
+            width: 80px;
+            box-sizing:border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>项目1</li>
+            <li>项目2</li>
+            <li>项目3</li>
+            <li>项目4</li>
+        </ul>
+    </div>
+</body>
+
+</html>
