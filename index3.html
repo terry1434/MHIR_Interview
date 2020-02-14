@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div.container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #17d4f0;
+            position: relative;
+        }
+
+        div.timeclick {
+            width: 300px;
+            height: 120px;
+            background-color: #343434;
+            color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        div.timeclick>input[type=button] {
+            width: 70px;
+            height: 40px;
+            background-color: #e0e0e0;
+            appearance: none;
+            outline: none;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+        }
+
+        div.timeclick>span {
+            font-size: 16px;
+            color: #fff;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="timeclick">
+            <span>0</span>
+            <input type="button" value="暂停" id="stop">
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            const stopBtn = document.getElementById('stop');
+            const parent = document.getElementsByClassName('timeclick')[0];
+            const counting = parent.querySelector('span');
+            let cl;
+
+            console.log(counting)
+            cl = setInterval(function () {
+                counting.innerText++;
+            }, 100);
+
+            stopBtn.addEventListener('click', function () {
+                // 此处补全代码使stopBtn按下后，停止计数
+                // 答案：clearInterval(cl);
+
+            })
+        }
+    </script>
+</body>
+
+</html>
